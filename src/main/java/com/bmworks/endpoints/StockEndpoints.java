@@ -1,4 +1,4 @@
-package com.bmworks.rabbit;
+package com.bmworks.endpoints;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
