@@ -2,11 +2,15 @@ package com.bmworks.usecases;
 
 public class RegisterProduct {
 
-    public RegisterProduct(ProducRepository producRepository) {
+    private ProductEventListener productEventListener;
 
+    public RegisterProduct(ProductEventListener productEventListener) {
+        this.productEventListener = productEventListener;
     }
 
     public String execute(Product product) {
-        return null;
+        productEventListener.onProductCreated(product);
+        return product.getName();
     }
+
 }
